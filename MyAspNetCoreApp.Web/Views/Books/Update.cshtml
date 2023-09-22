@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+
+@model Book
+<h1>Ürün Güncelleme</h1>
+
+<form asp-controller="Books" asp-action="Update" method="post">
+ 
+    <input type="hidden" asp-for="Id"> @**** burada id yi yollamak en önemli detay ve tabiki hiden olması lazım ***
+*@
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Kitabın Adı</label>
+        <input type="text" class="form-control" asp-for="Adi">
+
+    </div>
+    <div class="mb-3">
+
+        <label for="exampleInputEmail1" class="form-label">Kitabın Yazarı</label>
+        <input type="text" class="form-control" asp-for="Yazar"> @*//asp-for lara yazdıklarımın classdaki propertylerimizin adı olmalı*@
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Kategori</label>
+        <input type="text" class="form-control" asp-for="Kategori">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Özet</label>
+        <input type="text" class="form-control" asp-for="Ozet">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Sayfa Sayısı</label>
+        <input type="text" class="form-control" asp-for="SayfaSayisi">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kitabı Ekle</button>
+</form>

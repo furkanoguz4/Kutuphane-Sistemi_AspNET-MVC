@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<style>
+    .custom-button {
+        background-color: #ff5722; /* Arka plan rengi */
+        color: #fff; /* Yazı rengi */
+        font-size: 24px; /* Yazı boyutu */
+        padding: 15px 30px; /* Buton içeriği içindeki boşluklar */
+        border-radius: 10px; /* Kenar yuvarlatma */
+        border: none; /* Kenarlık yok */
+        cursor: pointer; /* İmleç tipi */
+        transition: background-color 0.3s ease; /* Arka plan rengi geçişi */
+    }
+
+        .custom-button:hover {
+            background-color: #e64a19; /* Fare üzerine gelince arka plan rengi değiştirme */
+        }
+</style>
+<a asp-controller="Books" asp-action="Go" class="btn btn-primary custom-button">Kitaplara Git</a>
